@@ -3,6 +3,9 @@ module.exports = {
     options: {
       server: {
         port: 3000
+      },
+      heavyService: {
+        iterationCount: 100000
       }
     }
   }
