@@ -1,7 +1,8 @@
 module.exports = {
   apps: [{
-    name: 'monolith',
-    script: 'src/service.js',
+    name: 'api',
+    script: 'service.js',
+    cwd: 'api',
     watch: true
   }]
 };
