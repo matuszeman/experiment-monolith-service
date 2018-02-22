@@ -8,7 +8,17 @@ class Logger {
   }
 }
 const logger = new Logger();
-function factoryListener(instance) {
+function factoryListener(instance, service) {
+  //do not set logger to these
+  if (_.includes([
+    'jobWorkerMessageSubscriber',
+    'jobSchedulerMessagePublisher',
+    'messageSubscriber',
+    'messagePublisher'
+    ], service.name)) {
+    return instance;
+  }
+
   if (_.isFunction(instance.setLogger)) {
     instance.setLogger(logger);
   }
