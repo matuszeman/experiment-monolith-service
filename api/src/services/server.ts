@@ -66,7 +66,8 @@ export class Server extends AbstractService {
       console.log(`Request ${req}: ^^^^^^^^^^^^^`); //XXX
 
       ctx.body = {
-        duration: this.formatDuration(heavyDuration)
+        duration: this.formatDuration(heavyDuration),
+        data: heavyRet
       };
     });
 
