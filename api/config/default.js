@@ -5,7 +5,7 @@ module.exports = {
         port: 3000
       },
       heavyService: {
-        iterationCount: 100000
+        iterationCount: 50000
       }
     }
   }
