@@ -1,5 +1,4 @@
 import {AbstractService} from '@kapitchi/bb-service';
-import {ServiceError} from '../lib/service-error';
 
 export class ErrorService extends AbstractService {
 
@@ -8,7 +7,9 @@ export class ErrorService extends AbstractService {
   }
 
   async serviceError(params) {
-    throw new ServiceError('UserNotExist', 'User does not exist');
+    const err = new Error('This is just some error');
+    err.code = 'SomeError';
+    throw err;
   }
 }
 
